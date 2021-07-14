@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head >
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+    <title>LineUp</title>
+  </head>
+
+  <body onload="func({{todo.todoPr}})">
+
+    <nav id = 'first'class="navbar navbar-expand-lg navbar-light  ">
+  <div class="container-fluid">
+    <a id='second' class="navbar-brand" href="../index.html">LineUp</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="first" aria-current="page" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="first" href="../addTodo.html">Add Todo</a>
+        </li>
+        <li class="nav-item">
+          <a class="first" href="../todoList.html">Todo List</a>
+        </li>
+        <li class="nav-item">
+          <a class="first" href="../index.html#About">About</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container" id="divId" >
+  {% if check %}
+  <br>
+  <div class="alert alert-danger fs-5 text-center info"  role="alert">
+    Access Denied.Looks like you are trying to update the todo item that doesn't belongs to you.
+  </div>
+  {% else %} 
+
+    <p class="text-info fs-2 my-1 text-center">Update Todo item</p>
+       <form action="/update/{{todo.sno}}" method="post" >
+        <div class="container" id="cFormId" >
+        <label for="TodoName" class="form-label classLabel">Todo Name</label>
+        <input placeholder='Write Name Here' type="text" name="TodoName" class="form-control classItems" value ='{{todo.todoName}}' required>
+         <label for="TodoDesc" class="form-label classLabel">Todo Description</label>
+        <textarea type='text' class="form-control classItems" placeholder="Write Description Here" name="TodoDesc" style="height: 100px" required >{{todo.todoDesc}}</textarea>
+        <label for="TodoPr" name='TodoPr' class="form-label classLabel">Choose Todo Priority</label>
+        <div class="form-check">
+
+
+        <input class="form-check-input TodoPr" type="radio" name='TodoPr'  value=1>
+        <label class="form-check-label text-primary" for="TodoPr">
+        Priority 1
+        </label><br>
+        <input class="form-check-input TodoPr" type="radio" name='TodoPr'   value=2  >
+        <label class="form-check-label text-info" for="TodoPr">
+        Priority 2
+        </label><br>        <input class="form-check-input TodoPr" type="radio" name='TodoPr'  value=3>
+        <label class="form-check-label text-warning" for="TodoPr">
+        Priority 3
+        </label><br>        <input class="form-check-input TodoPr" type="radio" name='TodoPr'   value=4 >
+        <label class="form-check-label text-dark" for="TodoPr">
+        Priority 4
+        </label><br>        <input class="form-check-input TodoPr" type="radio" name='TodoPr'  value=5 >
+        <label class="form-check-label text-secondary" for="TodoPr">
+        Priority 5
+        </label><br>
+        </div>
+        </label>
+        <p class="text-info fs-2 text-center" ><button type="submit" class="btn btn-primary">Submit</button></p>
+    </div> 
+    </form>
+    {% endif %} 
+
+</div>
+
+
+
+
+<script  src="../static/events.js" type="text/javascript"></script>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

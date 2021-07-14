@@ -1,0 +1,142 @@
+
+.btn a{
+	text-decoration: none !important;
+	color: #080808 !important;
+}
+
+#first{
+	background-color: #4abdac;
+}
+#second{
+	color: #fc4a1a;
+	font-size: 32px;
+	font-weight: bold;
+}
+.first {
+	color: #565656;
+	text-decoration: none;
+	margin: 15px ;
+	font-size: 23px;
+	border: 2px dotted #4abdac;
+	border-bottom-right-radius: 10px;
+	border-top-left-radius: 10px;
+	padding: 5px;
+
+}
+.first:hover{
+	border: 2px solid black;
+	border-bottom-right-radius: 10px;
+	border-top-left-radius: 10px;
+	color: #ffc107;
+
+}
+.second{
+	text-align: center;
+	color: #3D9970;
+	padding: 15px;
+}
+
+
+
+.classTid {
+	width:200px !important;
+	margin: 0 auto !important;
+	border:2px solid black !important;
+}
+
+.classItems{
+	margin: 0 auto !important;
+	border:2px solid black !important;
+}
+.classLabel{
+	font-size: 20px;
+}
+
+#copy{
+	margin-left: 10px;
+	opacity: 0.5;
+}
+#copy:hover{
+	opacity: 1;
+	cursor: pointer;
+}
+#copied{
+	display: None;
+	text-align: center;
+}
+
+#copyId{
+	display: inline-block !important;
+
+}
+
+
+@media only screen and (min-width: 375px){
+
+  #copyId{
+    width: 275px !important;
+  }
+  #copied{
+	width: 300px !important ;
+  }
+  #TodoId{
+  	width: 300px !important;
+  }
+  #divId{
+  	width: 375px !important;
+  }
+  #cFormId{
+	width: 300px  !important;
+  }
+  .classItems{
+	width:300px !important;
+  }
+  .info{
+  	width: 350px !important;
+  }
+
+}
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  #copyId{
+    width: 380px !important;
+  }
+  #copied{
+	width: 400px !important ;
+  }
+  #TodoId{
+  	width: 400px !important;
+  }
+  #divId{
+  	width: 400px !important;
+  }
+  #cFormId{
+	width: 400px  !important;
+  }
+  .classItems{
+	width:400px !important;
+  }
+  .info{
+  	width: 400px !important;
+  }
+}
+
+ @media (min-width:641px)  {/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  #divId{
+  	width: 700px !important;
+  }
+  #cFormId{
+	width: 500px  !important;
+  }
+  .classItems{
+	width:500px !important;
+  }
+  .info{
+	width: 700px !important;
+  }
+  .message{
+	width: 500px !important;
+  }
+  #copied{
+	width: 500px !important ;
+  }
+}
